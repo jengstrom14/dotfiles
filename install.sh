@@ -9,7 +9,7 @@ for file in $(find . -maxdepth 1 -name ".*" -type f  -printf "%f\n" ); do
     ln -s $PWD/$file ~/$file
 done
 
-sudo apt update && sudo apt install -f ripgrep neovim
+sudo apt update && sudo apt install -y ripgrep neovim
 mv ~/.config/nvim ~/.config/nvim.dtbak
 ln -s $PWD/nvim ~/.config/nvim
 
