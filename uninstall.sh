@@ -11,4 +11,10 @@ for file in $(find . -maxdepth 1 -name ".*" -type f  -printf "%f\n" ); do
     fi
 done
 
+unlink ~/config/nvim
+
+if [ -e ~/.config/nvim.dtbak ]; then
+    mv -f ~/.config/nvim.dtbak ~/.config/nvim
+fi
+
 echo "Uninstalled"
