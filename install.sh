@@ -11,7 +11,11 @@ done
 
 sudo apt update && sudo apt install ripgrep
 
-mv ~/.config/nvim ~/.config/nvim.dtbak
+if test -d "~/.config"; then
+    mv ~/.config/nvim ~/.config/nvim.dtbak
+else
+    mkdir ~/.config
+fi
 ln -s $PWD/nvim ~/.config/nvim
 
 echo "Installed"
