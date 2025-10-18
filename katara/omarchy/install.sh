@@ -1,14 +1,16 @@
 #!/bin/bash
 
-if test -d "~/.config"; then
-    mv ~/.config/hypr ~/.config/hypr.dtbak
-    mv ~/.config/waybar ~/.config/waybar.dtbak
-    mv ~/.config/pipewire/ ~/.config/pipewire.dtbak
+DIR="$HOME/.config"
+
+if test -d "$DIR"; then
+    mv $DIR/hypr $DIR/hypr.dtbak
+    mv $DIR/waybar $DIR/waybar.dtbak
+    mv $DIR/pipewire/ $DIR/pipewire.dtbak
 else
-    mkdir ~/.config
+    mkdir $DIR
 fi
-ln -s $PWD/hypr ~/.config/hypr
-ln -s $PWD/waybar ~/.config/waybar
-ln -s $PWD/pipewire ~/.config/pipewire
+ln -s $PWD/hypr $DIR/hypr
+ln -s $PWD/waybar $DIR/waybar
+ln -s $PWD/pipewire $DIR/pipewire
 
 echo "Installed"
