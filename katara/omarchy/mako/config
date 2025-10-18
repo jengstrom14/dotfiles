@@ -1,0 +1,3 @@
+include=~/.config/omarchy/current/theme/mako.ini
+output=DP-1
+anchor=bottom-right
