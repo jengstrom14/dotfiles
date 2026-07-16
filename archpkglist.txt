@@ -90,3 +90,5 @@ yay-bin
 zelda64recomp-bin
 zen-browser-bin
 zram-generator
+tree-sitter-cli
+fd
